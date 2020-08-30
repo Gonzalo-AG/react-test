@@ -3,25 +3,25 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  const nombre = "Agus"
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          conflicto 2s
-          Conflicto
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Texto nombre="asd"></Texto>
     </div>
   );
+}
+
+function Ejecutar () {
+  console.log("ejecutado")
+}
+
+function Texto(props) {
+  return(
+    <p onClick={Ejecutar}
+      >
+      {"hola " + props.nombre}
+    </p>
+  )
 }
 
 export default App;
